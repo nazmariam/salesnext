@@ -624,7 +624,7 @@ form {
   -ms-transition: all 300ms ease-in-out;
   -o-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
-  display: inline-block;
+  display: block;
   padding: 10px 30px;
   color: #fff;
   font-weight: 800;
@@ -687,7 +687,7 @@ form {
   font-weight: 500; }
 
 .about-goods {
-  background: url("../images/bg-banner-big-all.jpg") no-repeat center center;
+  background: url(../images/bg-banner-big-all.jpg) no-repeat top center;
   background-size: cover;
   padding: 40px 0 0;}
 .main-text {
@@ -697,6 +697,15 @@ form {
 }
 .top-button {
   padding: 82px 0;
+  position: relative;
+}
+.top-button::before {
+  position: absolute;
+  content: url(../images/arrows.png);
+  left: 50%;
+  margin-left: -80px;
+  top: 0;
+  -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
 }
   .about-goods h4 {
     color: red;
@@ -737,19 +746,21 @@ form {
     line-height: 24px;
   }
   .laptop {
-
+    background: url(../images/laptop.png) top center no-repeat;
+    background-size: contain;
+    height: 639px;
+    position: relative;
+    padding: 32px;
+  }
+  #top_video{
+    width: 100%;
   }
 
-  .laptop img {
-    width: 90%;
+  .facts {
+    padding: 0 0 0 40px;
+    color: #fff;
   }
-  .about-goods ol::after {
-    position: absolute;
-    content: url(../images/arrows.png);
-    left: 80px;
-    -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
-  }
-  .about-goods ol li {
+  .facts li {
     color: #fff;
     margin: 20px 0;
     line-height: 18px;
@@ -761,10 +772,6 @@ form {
     margin-left: -40px;
     margin-right: 16px;
   }
-
-.about-goods.last {
-    background: url("../images/last.png") no-repeat center center;
-    background-size: cover; }
 
 .video {
   padding: 35px 0 40px;
