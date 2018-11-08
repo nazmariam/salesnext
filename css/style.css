@@ -707,6 +707,120 @@ form {
   top: 0;
   -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
 }
+
+/*---------------- second section ------------------*/
+
+.good-image{
+  border: 5px solid yellow;
+}
+.good-image img{
+  width: 100%;
+}
+
+.good-arrows{
+  padding: 32px 0;
+}
+.good-arrows .arr-title{
+  font-weight: bold;
+}
+.good-arrows .arr-text{
+  padding: 0 0 0 50px;
+  position: relative;
+}
+.good-arrows .arr-text::before{
+  content: url("../images/arrow.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.container-feedback{
+  background-image: linear-gradient(90deg, white 21%, grey 21%, grey 79%, white 21%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 1px;
+  position: relative;
+}
+
+.money{
+  position: absolute;
+  z-index: 1;
+  bottom: -32px;
+  right: 20%;
+  background: #0c5460;
+  width: 100px;
+  height: 100px;
+}
+.feedback-title{
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+}
+
+.first,
+.second{
+  background: green;
+  padding: 16px 0;
+  width: 70%;
+  margin: 0 auto 32px;
+  box-shadow: black;
+  z-index: 2;
+  position: inherit;
+}
+
+.first .feedback-box,
+.second .feedback-box{
+  margin: auto;
+  width: 85%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.second{
+  background: red;
+}
+.second .feedback-box{
+  flex-direction: row;
+}
+.feedback-photo{
+  width: 50%;
+  height: 230px; /*remove!!!!!*/
+}
+.feedback-photo img{
+  width: 100%;
+}
+.feedback-content{
+  width: 50%;
+  background: white;
+  position: relative;
+  padding: 16px 10px;
+  margin: 10px 0;
+  text-align: center;
+}
+.feedback-content::before,
+.feedback-content::after{
+  position: absolute;
+  left: 10%;
+  top: 16px;
+  content: '';
+  display: block;
+  height: 1px;
+  background: grey;
+  width: 80%;
+}.feedback-content::after{
+  top: auto;
+  bottom: 16px;
+}
+
+.feedback-content .name{
+  color: #000;
+}
+.feedback-content .position{
+  color: grey;
+}
+.feedback-content .text{
+
+}
+
   .about-goods h4 {
     color: red;
     font-family: "Open Sans", sans-serif;
@@ -1196,45 +1310,9 @@ form {
     .description .button-wrapper {
       text-align: center;
       margin-bottom: 15px; }
-  .video-block{
-  background-image: none;}
 }
 
 
-
-
-.video-block{
-  padding: 40px 15px;
-  background: #fff;
-  background-image: url(../images/Layer1742.png), url(../images/Layer1743.png);
-  background-position: left bottom, right top;
-  background-repeat: no-repeat, no-repeat;
-}
-
-.video-block h1{
-  font-size: 34px;
-  font-weight: bold;
-    line-height: 32px;
-    color: #000;
-    width: 100%;
-    display: block;
-    margin-bottom: 40px;
-}
-.video-block h2 {
-  font-size: 21px;
-  line-height: 28px;
-  font-weight: 900;
-  margin: 25px;
-}
-.video-block h3{
-  color: #000;
-  font-weight: 900;
-  font-size: 30px;
-  font-family: Montserrat;
-}
-.video-block video{
-  width: 100%;
-}
 .video-content p{
   font-weight: 500;
   color: #000;
