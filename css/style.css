@@ -823,6 +823,9 @@ form {
 
 
 /*-------third screen*/
+.third-section {
+  padding-bottom: 48px;
+}
 .circle-check {
   padding-bottom: 100px;
 }
@@ -1168,43 +1171,97 @@ form {
   right: 8px;
 }
 
-/*--------tiles*/
+/*--------tiles--------------------*/
 
 .tiles {
-
+  background: #000;
 }
 .tiles-container {
-
+  background-color: green;
+  margin-bottom: -32px;
+  position: relative;
+  top: -20px;
+  bottom: -20px;
 }
 .tiles .device-box {
-
+  display: flex;
+  flex-direction: row;
+  padding: 20px 40px;
 }
 .tiles .device-img {
-
+  width: 60%;
 }
-.tiles img {
-
+.tiles .device-img img {
+  width: 100%;
 }
 .tiles .device-title {
-
+  font-weight: 900;
 }
 .tiles-row {
 
 }
 .tile-box {
-
+  display: flex;
+  flex-direction: column;
 }
 .reversed {
-
+  flex-direction: column-reverse;
 }
-.tile-img {
-
+.tile-img img {
+  width: 100%;
 }
 .tile-description {
+  border: 1px solid grey;
+  padding-top: 40px;
+  margin: 8px;
+  text-align: center;
+}
+.etc {
+  color: red;
+  margin: 12px auto;
+  text-transform: uppercase;
+}
 
+/*-----------------------END tiles--------------------*/
+/*----------------------certificate-------------------*/
+
+.certificate {
+  background: gray;
+  padding-top: 40px ;
+}
+.cert-img {
+  padding: 5px;
+  border: 1px solid #000;
+  width: 800px;
+  height: 400px;
+  margin-left: 100px;
+  position: relative;
+}
+.cert-img img {
+  width: 100%;
+}
+.cert-flyer {
+  bottom: 20px;
+  background: #000 url(../images/certificate.jpg) center center no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 250px;
+  position: absolute;
+}
+.cert-flyer p {
+  text-align: center;
+  padding: 20px 0;
+  color: #fff;
+}
+.cert-button-box {
+
+}
+.cert-button-box .standard-button {
+  width: 332px;
 }
 
 
+/*---------------------- END certificate-------------------*/
 
 .faq {
   padding: 40px 0;
@@ -1409,6 +1466,15 @@ form {
     .description .button-wrapper {
       text-align: center;
       margin-bottom: 15px; }
+
+  .tiles .device-box {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .reversed {
+    flex-direction: column;
+  }
+
 }
 
 
