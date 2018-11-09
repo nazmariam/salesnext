@@ -821,6 +821,66 @@ form {
 
 }
 
+
+/*-------third screen*/
+.circle-check {
+  padding-bottom: 100px;
+}
+.circle-check h4::after {
+  position: absolute;
+  content: url(../images/arrows.png);
+  left: 50%;
+  margin-left: -80px;
+  bottom: 8px;
+  animation: downarrow 0.6s infinite alternate ease-in-out;
+}
+
+/*start ***/
+.mg-top{
+  margin-top: 40px;
+}
+.circle-check:hover img{
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+}
+.circle-check img{
+  transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+}
+.circle-check h4{
+  color: #000;
+  font-size: 18px;
+  margin-top: 15px;
+  font-weight: 900;
+}
+.circle-check h4::before{
+
+}
+/*end ***/
+
+.third-section .standard-button {
+  margin: auto;
+  width: 332px;
+}
+
+.third-section h2::before,
+.third-section h2::after {
+  position: absolute;
+  left: 10%;
+  top: 42px;
+  content: '';
+  display: block;
+  height: 1px;
+  background: grey;
+  width: 80%;
+}
+.third-section h2::after {
+  top: 44px;
+  width: 60%;
+}
   .about-goods h4 {
     color: red;
     font-family: "Open Sans", sans-serif;
@@ -1107,6 +1167,45 @@ form {
   top: 8px;
   right: 8px;
 }
+
+/*--------tiles*/
+
+.tiles {
+
+}
+.tiles-container {
+
+}
+.tiles .device-box {
+
+}
+.tiles .device-img {
+
+}
+.tiles img {
+
+}
+.tiles .device-title {
+
+}
+.tiles-row {
+
+}
+.tile-box {
+
+}
+.reversed {
+
+}
+.tile-img {
+
+}
+.tile-description {
+
+}
+
+
+
 .faq {
   padding: 40px 0;
   background: #f6f6f6 url(../images/bg-banner4.jpg) 50% 40% no-repeat;
