@@ -703,7 +703,7 @@ form {
 }
 .top-button::before {
   position: absolute;
-  content: url(../images/arrows.png);
+  content: url(../images/arrows.svg);
   left: 50%;
   margin-left: -80px;
   top: 0;
@@ -717,6 +717,7 @@ form {
 }
 .good-image img{
   width: 100%;
+  padding: 16px 10px;git
 }
 
 .good-arrows{
@@ -730,7 +731,7 @@ form {
   position: relative;
 }
 .good-arrows .arr-text::before{
-  content: url("../images/arrow.png");
+  content: url("../images/black-arrow.svg");
   position: absolute;
   left: 0;
   top: 0;
@@ -1262,7 +1263,7 @@ form {
 }
 .cert-button-box::before,
 .cert-button-box::after {
-  content: url(../images/arrow.png);
+  content: url(../images/black-arrow.svg);
   position: absolute;
   left: -51px;
   top: 14px;
@@ -1271,6 +1272,7 @@ form {
   left: auto;
   top: 14px;
   right: -51px;
+  transform: rotate(180deg);
 }
 .cert-button-box .standard-button {
 
@@ -1360,7 +1362,7 @@ form {
 }
 .footer .standard-button::before {
   position: absolute;
-  content: url(../images/arrows.png);
+  content: url(../images/arrows.svg);
   left: 50%;
   margin-left: -80px;
   top: -72px;
