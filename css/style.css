@@ -628,7 +628,9 @@ form {
   padding: 10px 30px;
   color: #fff;
   font-weight: 800;
-  border: none; }
+  border: none;
+  width: 340px;
+}
   .standard-button b {
     display: block;
     text-align: center;
@@ -866,7 +868,6 @@ form {
 
 .third-section .standard-button {
   margin: auto;
-  width: 332px;
 }
 
 .third-section h2::before,
@@ -883,6 +884,7 @@ form {
 .third-section h2::after {
   top: 44px;
   width: 60%;
+  left: 20%;
 }
   .about-goods h4 {
     color: red;
@@ -1227,15 +1229,15 @@ form {
 
 .certificate {
   background: gray;
-  padding-top: 40px ;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .cert-img {
   padding: 5px;
   border: 1px solid #000;
-  width: 800px;
+  /*width: 800px;*/
   height: 400px;
   margin-left: 100px;
-  position: relative;
 }
 .cert-img img {
   width: 100%;
@@ -1254,100 +1256,110 @@ form {
   color: #fff;
 }
 .cert-button-box {
-
+  float: right;
+  margin: 40px 40px 0 0;
+  position: relative;
+}
+.cert-button-box::before,
+.cert-button-box::after {
+  content: url(../images/arrow.png);
+  position: absolute;
+  left: -51px;
+  top: 14px;
+}
+.cert-button-box::after {
+  left: auto;
+  top: 14px;
+  right: -51px;
 }
 .cert-button-box .standard-button {
-  width: 332px;
+
 }
 
 
 /*---------------------- END certificate-------------------*/
 
-.faq {
-  padding: 40px 0;
-  background: #f6f6f6 url(../images/bg-banner4.jpg) 50% 40% no-repeat;
-  background-size: cover;
-  position: relative; }
-  .faq h1 {
-      margin-bottom: 40px;
-      font-size: 38px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-     }
-  .faq ul li {
-    text-align: center;
-    margin-bottom: 30px; }
-    .faq ul li h2 {
-      font-size: 20px;
-      line-height: 26px;
-      padding: 15px 45px 15px 15px;
-      text-align: center;
-      font-weight: bold;
-      background: #2d2d2d;
-      border:2px solid #2d2d2d;
-      cursor: pointer;
-      position: relative;
-      color: #fff; }
-      .faq ul li h2:hover,
-      .faq ul li h2.active{
-        /*background: transparent;*/
-        /*color: #2d2d2d;*/
-        -webkit-transition: all 300ms ease-in-out;
-        -moz-transition: all 300ms ease-in-out;
-        -ms-transition: all 300ms ease-in-out;
-        -o-transition: all 300ms ease-in-out;
-        transition: all 300ms ease-in-out;
-      }
-      .faq ul li h2:hover:after,
-      .faq ul li h2.active:after{
-        border-color: #fff;
-      }
+/*----------------------bonus-------------------*/
 
-      .faq ul li h2:after {
-        content: '';
-        width: 15px;
-        height: 15px;
-        position: absolute;
-        right: 25px;
-        border-right: 2px solid #fff;
-        border-bottom: 2px solid #fff;
-        -moz-transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-        -webkit-transition: all 300ms ease-in-out;
-        -moz-transition: all 300ms ease-in-out;
-        -ms-transition: all 300ms ease-in-out;
-        -o-transition: all 300ms ease-in-out;
-        transition: all 300ms ease-in-out;
-        top: 40%; }
-      .faq ul li h2.active:after {
-        -moz-transform: rotate(-135deg);
-        -webkit-transform: rotate(-135deg);
-        -o-transform: rotate(-135deg);
-        -ms-transform: rotate(-135deg);
-        transform: rotate(-135deg);
-        -webkit-transition: all 300ms ease-in-out;
-        -moz-transition: all 300ms ease-in-out;
-        -ms-transition: all 300ms ease-in-out;
-        -o-transition: all 300ms ease-in-out;
-        transition: all 300ms ease-in-out;
-        top: 40%; }
-    .faq ul li .result {
-      display: none; }
-    .faq ul li p, .faq ul li li {
-      font-size: 18px;
-      line-height: 30px;
-      padding: 15px 0;
-      font-weight: 500;
-      margin-bottom: 0; }
-    .faq ul li ul {
-      padding-top: 15px; }
-    .faq ul li li {
-      padding: 0; }
-  .faq .result {
-    background: none !important; }
+.bonus-stripe {
+  background: yellow;
+  position: relative;
+  padding: 40px 0;
+}
+.bonus-stripe h3 {
+  text-align: center;
+}
+.bonus-stripe::before {
+  position: absolute;
+  top: 8px;
+  content: '';
+  display: block;
+  height: 2px;
+  background: #fff;
+  width: 100%;
+}
+.bonus-stripe::after {
+  position: absolute;
+  bottom: 8px;
+  content: '';
+  display: block;
+  height: 2px;
+  background: #fff;
+  width: 100%;
+}
+.bonus {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #000;
+  margin: 16px 0 0 0;
+}
+.bonus-img {
+  width: 45%;
+}
+.bonus-img img {
+  width: 100%;
+}
+.bonus-content {
+  padding: 20px;
+}
+
+/*---------------------- END bonus--------------*/
+
+/*---------------------- PS--------------*/
+
+.PS h3 {
+  font-weight: 900;
+  text-align: center;
+  position: relative;
+  margin: 40px 0;
+}
+.PS h3::after {
+  position: absolute;
+  top: 48px;
+  content: '';
+  display: block;
+  height: 1px;
+  background: grey;
+  width: 40%;
+  left: 30%;
+}
+.PS span {
+  display: block;
+  text-align: center;
+}
+.PS .standard-button::before {
+  position: absolute;
+  content: url(../images/arrows.png);
+  left: 50%;
+  margin-left: -80px;
+  top: 0;
+  -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
+}
+
+/*---------------------- END PS--------------*/
+
+
+
 
 @media only screen and (max-width: 1600px) {
   .video:before {
