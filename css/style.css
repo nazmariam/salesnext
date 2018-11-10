@@ -720,7 +720,7 @@ form {
 }
 .good-image img{
   width: 100%;
-  padding: 16px 10px;git
+  padding: 16px 10px;
 }
 
 .good-arrows{
@@ -728,7 +728,7 @@ form {
 }
 .good-arrows .arr-title{
   font-size: 36px;
-  line-height: 16px;
+  line-height: 1.5;
   color: #000;
   width: 100%;
   display: block;
@@ -737,9 +737,10 @@ form {
   font-weight: 900;
   text-shadow: 0px 1px 1px #080808;
   text-transform: uppercase;
+  text-align: center;
 }
 .good-arrows .arr-text{
-  padding: 0 0px 16px 75px;
+  padding: 0 0px 16px 84px;
   position: relative;
 }
 .good-arrows .arr-text::before{
@@ -762,27 +763,37 @@ form {
 .money{
   position: absolute;
   z-index: 1;
-  bottom: -32px;
-  right: 20%;
-  background: #0c5460;
+  bottom: 55px;
+  right: 21%;
   width: 100px;
   height: 100px;
 }
 .feedback-title{
-  font-weight: bold;
+  font-size: 36px;
+  line-height: 46px;
+  color: #000;
+  max-width: 1110px;
+  display: block;
+  font-family: 'Montserrat', cursive;
+  margin-bottom: 48px;
+  font-weight: 900;
+  text-shadow: 0px 1px 1px #080808;
+  text-transform: uppercase;
   margin: auto;
   text-align: center;
+  padding: 32px 8px;
 }
 
 .first,
 .second{
-  background: green;
+  background: #dae061;
   padding: 16px 0;
   width: 70%;
   margin: 0 auto 32px;
   box-shadow: black;
   z-index: 2;
   position: inherit;
+  box-shadow: 0px 9px 20px 0px rgba(0,0,0,0.1);
 }
 
 .first .feedback-box,
@@ -791,16 +802,17 @@ form {
   width: 85%;
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
 }
 .second{
-  background: red;
+  background: #c54d47;
 }
 .second .feedback-box{
   flex-direction: row;
 }
 .feedback-photo{
   width: 50%;
-  height: 230px; /*remove!!!!!*/
+  box-shadow: 0px 7px 20px 0px rgba(0,0,0,0.3);
 }
 .feedback-photo img{
   width: 100%;
@@ -809,30 +821,57 @@ form {
   width: 50%;
   background: white;
   position: relative;
-  padding: 16px 10px;
-  margin: 10px 0;
+  padding: 32px 16px;
+  margin: 32px 0;
   text-align: center;
+  box-shadow: 0px 7px 20px 1px rgba(0,0,0,0.2);
+  font-weight: 600;
 }
 .feedback-content::before,
 .feedback-content::after{
   position: absolute;
   left: 10%;
-  top: 16px;
+  top: 20px;
   content: '';
   display: block;
-  height: 1px;
-  background: grey;
+  height: 2px;
+  background: #dfdfdf;
   width: 80%;
 }.feedback-content::after{
   top: auto;
-  bottom: 16px;
+  bottom: 20px;
 }
 
 .feedback-content .name{
   color: #000;
+  font-size: 24px;
+  text-transform: uppercase;
 }
 .feedback-content .position{
-  color: grey;
+  color: #989c9d;
+  font-style: italic;
+  position: relative;
+  padding-bottom: 40px;
+}
+.feedback-content .position::before{
+  position: absolute;
+  left: 25%;
+  top: 28px;
+  content: '';
+  display: block;
+  height: 2px;
+  background: #dfdfdf;
+  width: 50%;
+}
+.feedback-content .position::after{
+  position: absolute;
+  left: 30%;
+  top: 38px;
+  content: '';
+  display: block;
+  height: 2px;
+  background: #dfdfdf;
+  width: 40%;
 }
 .feedback-content .text{
 
@@ -893,7 +932,7 @@ form {
   content: '';
   display: block;
   height: 1px;
-  background: grey;
+  background: #989c9d;
   width: 80%;
 }
 .third-section h2::after {
@@ -1003,7 +1042,7 @@ form {
       transform: scaleX(-1); }
   .video:before {
     content: '';
-    background: url("../images/video-before.png") no-repeat;
+    background: url("../images/") no-repeat;
     width: 403px;
     height: 750px;
     position: absolute;
@@ -1011,7 +1050,7 @@ form {
     bottom: 0; }
   .video:after {
     content: '';
-    background: url("../images/video-after.png") no-repeat;
+    background: url("../images/") no-repeat;
     width: 399px;
     height: 748px;
     position: absolute;
@@ -1228,7 +1267,7 @@ form {
   width: 100%;
 }
 .tile-description {
-  border: 1px solid grey;
+  border: 1px solid #989c9d;
   padding-top: 40px;
   margin: 8px;
   text-align: center;
@@ -1362,7 +1401,7 @@ form {
   content: '';
   display: block;
   height: 1px;
-  background: grey;
+  background: #989c9d;
   width: 40%;
   left: 30%;
 }
@@ -1403,11 +1442,11 @@ form {
     display: none; }
   .video:after {
     display: none; }
-  img {
-    max-width: 95%; }
+
   .about-goods .image-wrapper {
     position: relative;
-    left: 0;}}
+    left: 0;}
+}
 
 @media only screen and (max-width: 990px) {
   .description {
@@ -1513,7 +1552,20 @@ form {
   .reversed {
     flex-direction: column;
   }
-
+  .first .feedback-box,
+  .second .feedback-box{
+    flex-direction: column;
+  }
+  .feedback-content {
+    width: 100%;
+    margin: 0;
+  }
+  .feedback-photo {
+    width: 100%;
+  }
+  .first, .second {
+    width: 100%;
+  }
 }
 
 
