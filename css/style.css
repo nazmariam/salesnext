@@ -43,6 +43,9 @@ html {
   html * {
     outline: none;
     font-family: 'Open Sans', sans-serif; }
+  main{
+    overflow: hidden;
+  }
 
 /*-- standard resets-*/
 .full-hidden {
@@ -629,7 +632,7 @@ form {
   color: #fff;
   font-weight: 800;
   border: none;
-  width: 340px;
+  max-width: 340px;
 }
   .standard-button b {
     display: block;
@@ -706,7 +709,7 @@ form {
   content: url(../images/arrows.svg);
   left: 50%;
   margin-left: -80px;
-  top: 0;
+  top: -10px;
   -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
 }
 
@@ -987,6 +990,9 @@ form {
   width: 20%;
   left: 40%;
 }
+.third-section .books img {
+  width: 100%;
+}
   .about-goods h4 {
     color: red;
     font-family: "Open Sans", sans-serif;
@@ -1035,7 +1041,10 @@ form {
   #top_video{
     width: 100%;
   }
-
+  .facts-box{
+    text-align: center;
+    margin: 20px 0;
+  }
   .facts {
     padding: 0 0 0 40px;
     color: #fff;
@@ -1277,14 +1286,16 @@ form {
 /*--------tiles--------------------*/
 
 .tiles {
-  background: #000;
+  background: url("../images/bg-tiles.jpg") top center no-repeat;
+  background-size: cover;
 }
 .tiles-container {
-  background-color: green;
+  background-color: #fff;
   margin-bottom: -32px;
   position: relative;
   top: -20px;
   bottom: -20px;
+  box-shadow: 0px 7px 20px 0px rgba(0,0,0,0.3);
 }
 .tiles .device-box {
   display: flex;
@@ -1295,13 +1306,26 @@ form {
   width: 60%;
 }
 .tiles .device-img img {
-  width: 100%;
+  width: 90%;
+  margin: 20px;
 }
 .tiles .device-title {
   font-weight: 900;
+  font-size: 36px;
+  line-height: 1.5;
+  color: #000;
+  display: block;
+  font-family: 'Montserrat', cursive;
+  margin: 48px 0;
+  text-shadow: 0px 1px 1px #080808;
+  text-transform: uppercase;
+  width: 40%;
 }
 .tiles-row {
 
+}
+.tile-col{
+  width: 33.333333%;
 }
 .tile-box {
   display: flex;
@@ -1312,32 +1336,37 @@ form {
 }
 .tile-img img {
   width: 100%;
+  height: 220px;
 }
 .tile-description {
   border: 1px solid #989c9d;
-  padding-top: 40px;
   margin: 8px;
   text-align: center;
+  height: 204px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .etc {
   color: red;
-  margin: 12px auto;
+  margin: 16px auto;
   text-transform: uppercase;
+  font-style: italic;
 }
 
 /*-----------------------END tiles--------------------*/
 /*----------------------certificate-------------------*/
 
 .certificate {
-  background: gray;
+  background: url("../images/certificate-bg.jpg") top center no-repeat;
+  background-size: cover;
   padding-top: 40px;
   padding-bottom: 40px;
 }
 .cert-img {
   padding: 5px;
   border: 1px solid #000;
-  /*width: 800px;*/
-  height: 400px;
   margin-left: 100px;
 }
 .cert-img img {
@@ -1345,16 +1374,29 @@ form {
 }
 .cert-flyer {
   bottom: 20px;
-  background: #000 url(../images/certificate.jpg) center center no-repeat;
+  background: #000 url(../images/certificate-flyer.jpg) center center no-repeat;
   background-size: cover;
-  height: 100px;
-  width: 250px;
+  height: 230px;
+  width: 350px;
   position: absolute;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-shadow: 0px 1px 1px #080808;
 }
 .cert-flyer p {
   text-align: center;
-  padding: 20px 0;
+  padding: 17% 0;
   color: #fff;
+}
+.cert-flyer .yellow-b {
+  font: bold 22px/20px "Open Sans", sans-serif;
+  color: #ffea3a;
+  font-weight: 900;
+}
+.cert-flyer b {
+  font: bold 22px/20px "Open Sans", sans-serif;
+  color: #fff;
+  font-weight: 900;
 }
 .cert-button-box {
   float: right;
@@ -1363,16 +1405,18 @@ form {
 }
 .cert-button-box::before,
 .cert-button-box::after {
-  content: url(../images/black-arrow.svg);
+  content: url(../images/red-arrow.svg);
   position: absolute;
-  left: -51px;
+  left: -70px;
   top: 14px;
+  animation: rightarrow 0.6s infinite alternate ease-in-out;
 }
 .cert-button-box::after {
+  content: url(../images/red-arrow-reverse.svg);
   left: auto;
   top: 14px;
-  right: -51px;
-  transform: rotate(180deg);
+  right: -70px;
+  animation: rightarrow 0.6s infinite alternate ease-in-out;
 }
 .cert-button-box .standard-button {
 
@@ -1393,6 +1437,17 @@ form {
 }
 .bonus-stripe h3 {
   text-align: center;
+  font-size: 36px;
+  line-height: 46px;
+  color: #000;
+  max-width: 1110px;
+  display: block;
+  font-family: 'Montserrat', cursive;
+  font-weight: 900;
+  text-shadow: 0px 1px 1px #080808;
+  text-transform: uppercase;
+  margin: auto;
+  padding: 24px 8px;;
 }
 .bonus-stripe::before {
   position: absolute;
@@ -1415,17 +1470,30 @@ form {
 .bonus {
   display: flex;
   flex-direction: row;
-  border: 2px solid #000;
+  border: 4px solid #000;
   margin: 16px 0 0 0;
+  text-transform: uppercase;
 }
 .bonus-img {
   width: 45%;
 }
 .bonus-img img {
-  width: 100%;
+
 }
 .bonus-content {
-  padding: 20px;
+  padding: 56px;
+}
+.bonus-content h4 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 25px;
+  font-family: 'Montserrat', cursive;
+  font-weight: 700;
+  text-shadow: 0px 1px 1px #080808;
+}
+.bonus-content p {
+  margin: 32px 0;
+  font-size: 20px;
 }
 
 /*---------------------- END bonus--------------*/
@@ -1493,13 +1561,38 @@ form {
   .about-goods .image-wrapper {
     position: relative;
     left: 0;}
+  .bonus {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bonus-content{
+    text-align: center;
+  }
+  .bonus-content .standard-button{
+    margin: auto;
+  }
+  .bonus-img{
+    width: 100%;
+    text-align: center;
+  }
+  .laptop {
+    background: url(../images/laptop-small.png) top center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 990px) {
   .description {
     background: #fff; }
   .steps-list {
-    text-align: center; } }
+    text-align: center;
+  }
+  .tiles .device-title{
+    font-size: 28px;
+  }
+}
 
 @media only screen and (max-width: 768px) {
   .flip-clock-wrapper {
@@ -1612,6 +1705,26 @@ form {
   }
   .first, .second {
     width: 100%;
+  }
+  .tiles .device-title{
+    width: 100%;
+    text-align: center;
+  }
+  .tiles .device-img{
+    width: 100%;
+  }
+  .tile-col{
+    width: 100%;
+  }
+  .tile-img img{
+    height: auto;
+  }
+
+  .bonus-img img{
+    width: 100%;
+  }
+  .bonus-content{
+    padding: 8px;
   }
 }
 
@@ -1808,6 +1921,7 @@ form {
   display: block;
   width: 330px;
  }
+
 }
 @media (max-width:1199px)and (min-width:767px) {
   .play_cover {
@@ -1824,7 +1938,9 @@ form {
   }
 }
 @media(max-width: 767px){
-
+  .facts {
+    padding: 0 0 58px 40px;
+  }
   form .security_box{
     padding: 0;
     display: flex;
@@ -1876,6 +1992,10 @@ form {
   }
   a.standard-button{
     display: block;
+    margin: 10px auto;
+  }
+  .top-button::before{
+    top: -74%;
   }
   .offer-span{
     margin-left: 0;
@@ -1968,7 +2088,23 @@ form {
     display: block;
     margin: 0 auto;
   }
-
+  .money {
+    right: 59%;
+  }
+  .third-section h2 {
+    padding: 114px 8px 32px;
+  }
+  .cert-flyer {
+    position: relative;
+    margin: 0 auto;
+    bottom: 0;
+  }
+  .cert-img {
+    margin: 20px auto;
+  }
+  .bonus-stripe h3 {
+    font-size: 32px;
+  }
 }
   @media(max-width: 500px) {
   .click img {
@@ -1977,6 +2113,9 @@ form {
     .click {
       right: -16%;
     }
+  .cert-flyer {
+    width: auto;
+  }
   }
 
 
