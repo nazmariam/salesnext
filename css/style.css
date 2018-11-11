@@ -311,7 +311,8 @@ html {
   width: 40%;
 }
 .feedback-content .text{
-
+  font-size: 20px;
+  line-height: 25px
 }
 
 
@@ -816,7 +817,7 @@ html {
 
 @media only screen and (max-width: 990px) {
   .tiles .device-title{
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 
@@ -858,6 +859,7 @@ html {
   }
   .feedback-photo {
     width: 100%;
+    z-index: 2;
   }
   .first, .second {
     width: 100%;
@@ -929,7 +931,9 @@ html {
     margin: 20px auto;
   }
   .bonus-stripe h3 {
-    font-size: 32px;
+    font-size: 29px;
+    line-height: 32px;
+    padding: 0;
   }
   .cert-button-box {
     margin: 66px 24px 0 0;
@@ -968,12 +972,151 @@ html {
   }
   .cert-flyer {
     width: auto;
+    height: 170px;
+    font-size: 24px;
+  }
+  .cert-flyer .yellow-b {
+    font-size: 28px;
   }
   .footer h3 {
-    font-size: 30px;
+    font-size: 28px;
+    line-height: 34px;
   }
   .footer h3::after{
     top: 240px;
   }
+  .money img {
+    width: 250px;
+  }
+  .money {
+    bottom: 5px;
+  }
 }
-
+@media(max-width: 320px) {
+  .about-goods h4 {
+    color: red;
+    font-family: "Open Sans", sans-serif;
+    font-size: 22px;
+    margin: 10px 4px;
+  }
+  .about-goods p {
+    font-style: italic;
+    margin: 8px 5px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  .about-goods h1 {
+    font-size: 27px;
+    margin-bottom: 0px;
+    font-weight: 900;
+  }
+  .laptop {
+    padding: 20px;
+  }
+  .about-goods span {
+    padding: 6px 9px 10px;
+    margin-right: 11px;
+  }
+  .facts-box {
+    text-align: left;
+    font-size: 19px;
+  }
+  .good-arrows {
+    padding: 24px 0 0 4px;
+  }
+  .good-arrows .arr-title {
+    font-size: 28px;
+    text-align: left;
+    margin-bottom: 18px;
+  }
+  .good-arrows .arr-text {
+    padding: 0 0 16px 65px;
+    font-size: 18px;
+  }
+  .good-row .good-arrows .arr-text::before {
+    background: url(../images/black-arrow.svg) center no-repeat;
+    background-size: contain;
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: rightarrow 0.6s infinite alternate ease-in-out;
+    width: 24%;
+    height: 34px;
+  }
+  .feedback-title {
+    font-size: 24px;
+    line-height: 30px;
+    padding: 0;
+  }
+  .feedback-content .name {
+    font-size: 28px;
+  }
+  .feedback-content .position {
+    font-size: 18px;
+    padding-bottom: 32px;
+  }
+  .feedback-content .text {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .first, .second {
+    margin: 0 auto -1px;
+  }
+  .third-section h2 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+  .third-section h2::after {
+    bottom: -2%;
+    width: 50%;
+    left: 25%;
+  }
+  .third-section h2::before {
+    left: 15%;
+    bottom: 0px;
+    width: 70%;
+  }
+  .third-section .good-arrows .arr-text::before {
+    left: 9px;
+  }
+  .good-arrows {
+    padding: 24px 5px 5px 4px;
+  }
+  .circle-check img {
+    width: 140px;
+    height: 140px;
+  }
+  .circle-check h4 {
+    font-size: 21px;
+  }
+  .tiles-container {
+    width: 90%;
+    margin: 0px 17px -32px 17px;
+  }
+  .tiles .device-title{
+    margin: 0;
+    line-height: 28px;
+  }
+  .tiles .device-img img {
+    width: 100%;
+    margin: 10px;
+  }
+  .footer .container {
+    padding: 40px 5px 40px;
+    margin: 0 11px;
+    width: 93%;
+  }
+  .footer h3::after {
+    top: 200px;
+  }
+  .footer span {
+    margin: 60px 0;
+    font-size: 27px;
+  }
+  .footer .standard-button {
+    margin: 120px auto 16px;
+  }
+}
