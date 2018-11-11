@@ -82,6 +82,16 @@ html {
   font-weight: 800;
   border: none;
   max-width: 340px;
+  position: relative;
+}
+.standard-button:before{
+  content: '';
+  position: absolute;
+  border: 1px solid #ff0041;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
 }
   .standard-button b {
     display: block;
@@ -751,7 +761,7 @@ html {
   color: #fff;
   text-transform: uppercase;
 }
-.footer .standard-button::before {
+.footer .standard-button::after {
   position: absolute;
   content: url(../images/red-arrows.svg);
   left: 50%;
