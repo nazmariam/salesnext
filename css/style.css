@@ -1540,6 +1540,12 @@ form {
 .footer .standard-button {
   margin: 120px auto 60px;
   position: relative;
+  display: block;
+  text-align: center;
+  font-size: 26px;
+  line-height: 32px;
+  color: #fff;
+  text-transform: uppercase;
 }
 .footer .standard-button::before {
   position: absolute;
@@ -2125,6 +2131,27 @@ form {
   }
   .bonus-stripe h3 {
     font-size: 32px;
+  }
+  .cert-button-box {
+    margin: 66px 40px 0 0;
+  }
+  .cert-button-box::after {
+    content: url(../images/red-arrow-reverse.svg);
+    left: auto;
+    transform: rotate(270deg);
+    top: -43px;
+    right: 62px;
+    -webkit-animation: none;
+    -o-animation: none;
+    animation: none;
+  }
+  .cert-button-box::before {
+    left: 77px;
+    top: -43px;
+    transform: rotate(90deg);
+    -webkit-animation: none;
+    -o-animation: none;
+    animation: none;
   }
 }
 
