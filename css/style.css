@@ -955,6 +955,17 @@ html {
 }
 
 @media(max-width: 500px) {
+
+  .about-goods .container{
+    margin: 15px;
+    width: auto;
+  }
+  .main-text{
+    padding: 4px;
+  }
+  .feedback-title {
+    font-size: 32px;
+  }
   .cert-flyer {
     width: auto;
   }
